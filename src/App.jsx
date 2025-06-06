@@ -97,21 +97,23 @@ export default function App() {
         </div>
       </section>
       {/* Skills Section */}
-      <section id="skills" className="max-w-5xl mx-auto mt-14 md:mt-20 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-8 sm:mb-10 flex items-center">
-          Skills<span className="text-purple-600 ml-2">.</span>
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skills.map((cat) => (
-            <div key={cat.title} className="">
-              <h3 className="text-lg sm:text-xl font-bold mb-3">{cat.title}</h3>
-              <ul className="space-y-2 text-gray-700 text-base sm:text-lg">
-                {cat.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      <section id="skills" className="max-w-5xl mx-auto mt-14 md:mt-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center md:block">
+        <div className="w-full max-w-xs md:max-w-none flex flex-col items-center md:block">
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-8 sm:mb-10 flex items-center justify-center text-center">
+            Skills<span className="text-purple-600 ml-2">.</span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+            {skills.map((cat) => (
+              <div key={cat.title} className="text-center md:text-left">
+                <h3 className="text-lg sm:text-xl font-bold mb-3">{cat.title}</h3>
+                <ul className="space-y-2 text-gray-700 text-base sm:text-lg">
+                  {cat.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       {/* Projects Section */}

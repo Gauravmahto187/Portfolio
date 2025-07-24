@@ -1,6 +1,6 @@
 import React from 'react';
 import profileImg from './assets/profile.png';
-import amazonImg from './assets/Amazon.png';
+import geminiImg from './assets/Gemini.png';
 import emporaImg from './assets/Empora.png';
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaCheckCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -11,7 +11,6 @@ const navLinks = [
   { name: 'Experience', href: '#experience' },
   { name: 'Education', href: '#education' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Certifications', href: '#certifications' },
   { name: 'Skills', href: '#skills' },
 ];
 
@@ -36,16 +35,16 @@ const skills = [
 
 const projects = [
   {
-    title: 'Amazon Clone',
-    image: amazonImg,
-    description: 'A fully functional frontend clone of the Amazon website using HTML, CSS, and JavaScript. Focused on responsive design and layout to replicate the user interface and experience.',
-    link: '',
+    title: 'Gemini Clone',
+    image: geminiImg,
+    description: 'A fully functional frontend clone of the Gemini website using React JS and Google Gemini API. Focused on responsive design and layout to replicate the user interface and experience.Built a prompt search feature and recent chat history, closely mirroring Gemini’s user experience.',
+    link: 'https://gemini-clone-snowy.vercel.app/',
   },
   {
     title: 'Empora',
     image: emporaImg,
     description: 'Employee Management System using the MERN stack (MongoDB, Express.js, React.js, Node.js). Supports CRUD operations and features a responsive, user-friendly interface.',
-    link: '',
+    link: 'https://empora-one.vercel.app/login',
   },
 ];
 
@@ -123,15 +122,22 @@ export default function App() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {projects.map((project) => (
-            <motion.div
+            <a
               key={project.title}
-              className="rounded-3xl bg-white shadow-xl p-4 sm:p-6 flex flex-col gap-4 hover:shadow-2xl transition-shadow border border-gray-100"
-              whileHover={{ scale: 1.03 }}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
             >
-              <img src={project.image} alt={project.title} className="rounded-2xl w-full h-44 sm:h-56 object-cover border border-purple-100 mb-2" />
-              <h3 className="text-xl sm:text-2xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-2 text-base sm:text-lg">{project.description}</p>
-            </motion.div>
+              <motion.div
+                className="rounded-3xl bg-white shadow-xl p-4 sm:p-6 flex flex-col justify-between min-h-[420px] hover:shadow-2xl transition-shadow border border-gray-100 h-full"
+                whileHover={{ scale: 1.03 }}
+              >
+                <img src={project.image} alt={project.title} className="rounded-2xl w-full h-44 sm:h-56 object-cover border border-purple-100 mb-2" />
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-2 text-base sm:text-lg line-clamp-4">{project.description}</p>
+              </motion.div>
+            </a>
           ))}
         </div>
       </section>
@@ -187,17 +193,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      {/* Certifications Section */}
-      <section id="certifications" className="max-w-5xl mx-auto mt-16 md:mt-24 px-4 sm:px-6 lg:px-8 mb-16 md:mb-24">
-        <h2 className="text-3xl sm:text-4xl font-extrabold mb-6 flex items-center">
-          Certifications<span className="text-purple-600 ml-2">.</span>
-        </h2>
-        <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-8">
-          <h3 className="font-bold text-base sm:text-lg">AWS Academy Graduate - AWS Academy Cloud Foundations <span className="text-xs sm:text-sm text-gray-500">2023</span></h3>
-          <p className="italic text-gray-600">Amazon Web Services Training and Certification</p>
-          <p className="text-xs sm:text-sm text-gray-500">Learned core AWS services, cloud computing principles, and skills for deploying and managing applications of the AWS Cloud.</p>
-        </div>
-      </section>
+      
     </div>
   );
 }

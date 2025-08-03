@@ -5,6 +5,8 @@ import emporaImg from './assets/Empora.png';
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaCheckCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react';
+
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -50,7 +52,9 @@ const projects = [
 
 export default function App() {
   return (
+    
     <div className="min-h-screen bg-[#fafafd] text-gray-900 font-sans">
+      <Analytics />
       {/* Sticky Navbar */}
       <nav className="sticky top-0 z-20 bg-white/80 backdrop-blur-md shadow flex flex-wrap justify-center gap-4 md:gap-8 py-3 px-2 md:px-6 border-b border-gray-100 text-base md:text-lg">
         {navLinks.map(link => (

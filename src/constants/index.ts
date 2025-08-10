@@ -5,9 +5,7 @@ import project4 from "../assets/projects/project-4.jpeg";
 
 //All the details about the website is mentioned below
 
-export const HERO_CONTENT = `Creative and detail-oriented FullStack Developer with hands-on experience in building responsive, scalable Fullstack applications. 
-Proficient in modern JavaScript, API integration, and version control with a passion for intuitive UI/UX design and performance 
-optimization.`;
+export const HERO_CONTENT = `Creative and detail-oriented Frontend Developer with hands-on experience in building responsive, scalable React.js applications. Proficient in modern JavaScript, API integration, and version control with a passion for intuitive UI/UX design and performance optimization.`;
 
 export interface Experience {
   year: string;

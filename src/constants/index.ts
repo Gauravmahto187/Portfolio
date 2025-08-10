@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     description:
       "I developed a responsive web application for managing events, following a mobile-first design approach to ensure optimal usability across devices. The application utilized localStorage-based data persistence to maintain event details without the need for a backend. I designed and integrated a date and venue conflict detection feature to prevent double bookings, enhancing scheduling accuracy. Additionally, I provided both list and calendar views, allowing users to easily view, edit, and delete events.",
     technologies: [
-      "React.js", "Material UI", "Javascript"
+      "React.js", "Material UI", "Typescript"
     ],
   },
   {

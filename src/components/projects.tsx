@@ -56,7 +56,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="mb-6 rounded w-[350px] h-[250px] lg:w-[300px] lg:h-[200px] hover:opacity-80 transition-opacity duration-300"
+                  className="mb-6 rounded w-[350px] h-[250px] lg:w-[300px] lg:h-[200px] hover:opacity-80 hover:scale-110 transition-all duration-300 transform"
                 />
               </a>
             </motion.div>

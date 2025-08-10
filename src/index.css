@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @tailwind base;
@@ -8,6 +7,3 @@
 :root {
   font-family: "Inter", sans-serif;
 }
-=======
-@import "tailwindcss";
->>>>>>> d1d50e04ea9319ae01d7390736293c38cb85845a

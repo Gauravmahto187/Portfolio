@@ -24,7 +24,7 @@ const Projects = () => {
     "https://gemini-clone-snowy.vercel.app/",
     "https://empora-one.vercel.app/login", 
     "https://event-management-nu-henna.vercel.app/",
-    "https://acepte.vercel.app/"
+    "https://aceptecourse.com/"
   ];
 
   return (
